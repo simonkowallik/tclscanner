@@ -1,6 +1,7 @@
 name: ci
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main"
@@ -40,6 +41,4 @@ jobs:
           push: true
           tags: |
             simonkowallik/tclscanner:latest
-            simonkowallik/tclscanner:1.0.0
             ghcr.io/simonkowallik/tclscanner:latest
-            ghcr.io/simonkowallik/tclscanner:1.0.0
