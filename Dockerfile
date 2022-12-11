@@ -73,6 +73,7 @@ COPY --from=build /build/target /usr
 COPY --from=build /build/tclscan/LICENSE /LICENSE.tclscan
 COPY /LICENSE /LICENSE
 COPY /README.md /README.md
+COPY /tests/tcl/* /scandir
 
 COPY files/tclscanner.py /usr/bin/tclscanner.py
 RUN ln -s /usr/bin/tclscanner.py /usr/bin/tclscanner
