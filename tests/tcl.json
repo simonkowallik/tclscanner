@@ -1,0 +1,26 @@
+{
+    "./tcl/dangerous.tcl": {
+        "errors": [],
+        "warnings": [
+            "WARNING: Unquoted expr at `1` in `expr 1 + $one`",
+            "WARNING: Unquoted expr at `+` in `expr 1 + $one`"
+        ],
+        "dangerous": [
+            "DANGEROUS: Dangerous unquoted expr at `$one` in `expr 1 + $one`"
+        ]
+    },
+    "./tcl/ok.tcl": {
+        "errors": [],
+        "warnings": [],
+        "dangerous": []
+    },
+    "./tcl/warning.tcl": {
+        "errors": [],
+        "warnings": [
+            "WARNING: Unquoted expr at `1` in `expr 1 + 1`",
+            "WARNING: Unquoted expr at `+` in `expr 1 + 1`",
+            "WARNING: Unquoted expr at `1` in `expr 1 + 1`"
+        ],
+        "dangerous": []
+    }
+}
