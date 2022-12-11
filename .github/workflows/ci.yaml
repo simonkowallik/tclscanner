@@ -12,6 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: install jq
+        run: sudo apt install jq
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -21,7 +24,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build and export
+      - name: Build container image
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -34,5 +37,6 @@ jobs:
 
       - name: Test
         run: |
-          docker run --rm -v $PWD/tests:/scandir tclscanner:latest jq | jq \
-            | diff --ignore-space-change --ignore-blank-lines - output.json
+          docker run --rm -v $PWD/tests/tcl:/scandir tclscanner:latest \
+            | jq | jq --sort-keys . \
+            | diff --ignore-all-space --ignore-blank-lines - <(jq --sort-keys . tests/tcl.json)

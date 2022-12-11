@@ -1,5 +1,5 @@
 {
-    "./tcl/dangerous.tcl": {
+    "./dangerous.tcl": {
         "errors": [],
         "warnings": [
             "WARNING: Unquoted expr at `1` in `expr 1 + $one`",
@@ -9,12 +9,12 @@
             "DANGEROUS: Dangerous unquoted expr at `$one` in `expr 1 + $one`"
         ]
     },
-    "./tcl/ok.tcl": {
+    "./ok.tcl": {
         "errors": [],
         "warnings": [],
         "dangerous": []
     },
-    "./tcl/warning.tcl": {
+    "./warning.tcl": {
         "errors": [],
         "warnings": [
             "WARNING: Unquoted expr at `1` in `expr 1 + 1`",
