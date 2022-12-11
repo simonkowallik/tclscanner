@@ -39,6 +39,8 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          cache-from: type=registry,ref=simonkowallik/tclscanner:latest
+          cache-to: type=inline
           tags: |
             simonkowallik/tclscanner:latest
             ghcr.io/simonkowallik/tclscanner:latest
