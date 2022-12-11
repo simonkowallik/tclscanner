@@ -47,4 +47,5 @@ jobs:
         uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          # docker... https://github.com/peter-evans/dockerhub-description/issues/10
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
