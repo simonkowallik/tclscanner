@@ -14,7 +14,7 @@ What it does is:
 
 ## Warning
 
-***Please understand that tclscanner can't guarantee code quality or safety in any way. You are soley responsible for your code safety and quality.***
+***Please understand that tclscanner can't guarantee code quality or safety in any way. You are solely responsible for your code safety and quality.***
 
 
 ## What is tclscan
