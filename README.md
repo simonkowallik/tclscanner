@@ -1,8 +1,7 @@
 # tclscanner
 
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/simonkowallik/tclscanner.svg?color=brightgreen)](https://hub.docker.com/r/simonkowallik/tclscanner)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/simonkowallik/tclscanner.svg)](https://hub.docker.com/r/simonkowallik/tclscanner/builds)
-[![image information](https://images.microbadger.com/badges/image/simonkowallik/tclscanner.svg)](https://microbadger.com/images/simonkowallik/tclscanner)
+[![ci status](https://github.com/simonkowallik/tclscanner/actions/workflows/ci.yaml/badge.svg)](https://github.com/simonkowallik/tclscanner/actions/workflows/ci.yaml)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/simonkowallik/tclscanner)
 
 ## Intro
 
@@ -126,6 +125,10 @@ Limit the scan to a single iRule (`myirule.iRule`) within `$HOME/irules`:
 ```sh
 docker run --rm -i -v $HOME/irules:/scandir:ro simonkowallik/tclscanner tclscanner.py --file myirule.iRule
 ```
+
+## ghcr.io
+
+The container image is also available via [ghcr.io]([ghcr.io](https://github.com/simonkowallik/tclscanner/pkgs/container/tclscanner)).
 
 ## Problems / ideas?
 
